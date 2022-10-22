@@ -40,7 +40,7 @@ module.exports = (dependencies) => {
             const id = request.params.song_id;
             //console.log(id);
             try {
-                const result = dependencies.models.song.find({_id:id});
+                const result = dependencies.models.song.findOne({_id:id});
                 result
                   .then((lists) => {
                     response.setHeader('Content-Type', 'application/json');
